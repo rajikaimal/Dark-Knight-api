@@ -1,8 +1,13 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
-var batModel = new Schema({
-
+var batModel =  mongoose.Schema({
+	comic : {
+		type : String
+	},
+	genre : {
+		type: String
+	}
 });
 
-module.exports = batModel;
+module.exports = mongoose.model('batman',batModel);
